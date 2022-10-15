@@ -1,0 +1,36 @@
+buildscript {
+    ext.kotlin_version = '1.5.21'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    material_version = "1.4.0"
+    room_version = "2.3.0"
+    lifecycle_version = "2.3.1"
+    coroutines_version = "1.5.1"
+    retrofit_version = "2.9.0"
+    gson_version = "2.8.7"
+    gson_converter_version = "2.9.0"
+    lottie_version = "3.7.1"
+    glide_version = "4.12.0"
+    datastore_version = "1.0.0-rc01"
+    play_services_version = "18.0.0"
+}
